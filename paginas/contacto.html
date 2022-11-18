@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melon Pan</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" type="image/x-icon" href="../img/icono.png">
+</head>
+
+<body>
+    <div class="fondo"></div>
+    <header id="top">
+        <a href="../index.html">
+            <img src="../img/logo.png" alt="logo" width="100px">
+        </a>
+        <form class="busqueda" action="" method="post">
+            <p>
+                <label for="nombre"></label>
+                <input type="text" name="busqueda" id="busqueda" required="obligatorio" placeholder="Buscar">
+            </p>
+        </form>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li> <a href="">Productos</a>
+                    <ul>
+                        <li><a href="mangas.html">Mangas</a>
+                        </li>
+                        <li>
+                            <a href="indumentaria.html">Indumentaria</a>
+                        </li>
+                        <li>
+                            <a href="figuras.html">Figuras</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="formulario">
+            <h1>Contáctanos</h1>
+            <h3>Llena este formulario y nos pondremos en contacto.</h3>
+            <form action="" method="post">
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="ingresarNombre" id="nombre" required="obligatorio"
+                        placeholder="Escribe tu nombre">
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" name="ingresarEmail" id="email" required="obligatorio"
+                        placeholder="Escribe tu email">
+                </p>
+                <p>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" name="ingresarAsunto" id="asunto" required="obligatorio"
+                        placeholder="Escribe el asunto">
+                </p>
+                <p>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="ingresarMensaje" id="mensaje" placeholder="Escribe tu mensaje" cols="30"
+                        rows="10"></textarea>
+                </p>
+                <button type="submit" name="enviarFormulario" id="enviar">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <img src="./img/imagenejemplo.png" width="150" alt="">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident unde dolores velit adipisci
+                reprehenderit ipsa eaque voluptatem cumque tenetur veritatis aut ea, molestias libero quisquam saepe
+                officia praesentium at nulla!
+            </p>
+            <a href="#top">
+                <h5>Ir al comienzo</h>
+            </a>
+            <p> <strong>Redes</strong> </p>
+            <a href="">
+                <img src="../img/imagenejemplo.png" width="50" height="50" alt="Instagram">
+            </a>
+            <a href="">
+                <img src="../img/imagenejemplo.png" width="50" height="50" alt="Twitter">
+            </a>
+            <a href="">
+                <img src="../img/imagenejemplo.png" width="50" height="50" alt="Facebook">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
