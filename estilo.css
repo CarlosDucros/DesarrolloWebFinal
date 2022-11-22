@@ -22,9 +22,11 @@ body {
 .grid {
     display: grid;
     grid-template-areas:
-        "header header"
-        "main main"
-        "footer footer";
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
 }
 
 .gridProductos {
@@ -40,7 +42,6 @@ body {
 h1 {
     text-align: center;
     padding: 15px;
-
 }
 
 header {
@@ -50,30 +51,27 @@ header {
     right: 0;
     background: #fce5bb;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-    padding: 0%;
+    padding: 0 10%;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     z-index: 1000;
+    gap: 20px;
     margin: 1.5% 15%;
     border-radius: 1rem;
     padding: 1.1rem;
 }
 
-.menu {
+.menu{
     display: flex;
     justify-content: flex-end;
-
 }
-
 .logo {
     width: 80px;
 }
 
 header .menu ul {
     list-style: none;
-    margin-bottom: 0;
-
 }
 
 header .menu ul li {
@@ -156,7 +154,7 @@ main {
 
 .novedades__imagen img:hover {
     filter: invert(1);
-    /* La idea es reemplazar esto con una imagen naranja con baja opacidad, por ahora es para representarlo nomas */
+    /* La idea es reemplazar esto con una imagen naranja con baja opacidad, por ahora es para representarlo nomas (Lo encontre en internet) */
 }
 
 .novedades__precio p {
@@ -194,15 +192,15 @@ main {
 
 /* Tuve que crear la clase productos aunque sea muy parecida a novedades por el aside del costado, no se si puedo reutilizar la clase novedades y esto es desprolijo */
 .productos {
-    margin: 10px auto;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
+    margin: 20px auto;
+    width: 80%;
+    display: block;
+    
 }
 
 .productos__imagen img {
-    width: 70%;
+    width: 224px;
+    height: 264px;
     box-shadow: 5px 5px rgba(35, 35, 35, 0.2);
     transition: filter 0.3s;
     border-radius: 5%;
@@ -210,7 +208,7 @@ main {
 
 .productos__imagen img:hover {
     filter: invert(1);
-    /* La idea es reemplazar esto con una imagen naranja con baja opacidad, por ahora es para representarlo nomas*/
+    /* La idea es reemplazar esto con una imagen naranja con baja opacidad, por ahora es para representarlo nomas (Lo encontre en internet) */
 }
 
 .productos__precio p {
@@ -224,7 +222,7 @@ main {
     justify-items: center;
     padding: 25px;
 
-
+    
 }
 
 aside {
@@ -243,10 +241,9 @@ aside div {
 
 }
 
-.dropdown {
+.dropdown{
     margin: 20px;
 }
-
 .formulario {
     text-align: center;
 }
@@ -269,7 +266,7 @@ form p input {
 
     justify-content: space-between;
     border-radius: 5px;
-    background-color: #f6bb6e60;
+    background-color: #f6bb6e;
     width: 400px;
     height: 45px;
     border-style: solid;
@@ -279,9 +276,7 @@ form p input {
     padding-left: 10px;
     margin-bottom: 20px;
     padding-top: 3px;
-
 }
-
 /* Lo voy a poner cuando tenga el menu hamburguesa
 .busqueda {
     padding: 0;
@@ -299,7 +294,7 @@ form p textarea {
 
     justify-content: space-between;
     border-radius: 5px;
-    background-color: #f6bb6e60;
+    background-color: #f6bb6e;
     width: 400px;
     height: 130px;
     border-style: solid;
@@ -320,10 +315,10 @@ form button {
     margin-bottom: 20px;
 }
 
-.redesImagenes {
-    width: 50px;
+.redesImagenes{
+    width:50px;
     margin: 5px;
-
+    
 }
 
 footer {
@@ -333,30 +328,16 @@ footer {
     color: antiquewhite;
     padding: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
 
 }
-footer p{
-    align-self: center;
-}
-.nostyle{
-    text-decoration: none;
-}
-.logoFooter {
+
+.logoFooter{
     width: 80px;
     margin: 10px 5px;
 }
 
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 0.8rem;
-    }
-
-    h3,
-    h5 {
-        font-size: medium;
-    }
-
+@media screen and (max-width: 480px){
     .grid {
         display: grid;
         grid-template-areas:
@@ -365,117 +346,62 @@ footer p{
             "footer";
         grid-template-columns: 1fr;
     }
-
     header {
         grid-template-columns: 1fr;
-        justify-items: space-evenly;
+        justify-items:space-evenly;
         gap: 0px;
         margin: 0;
-        padding: 4px;
-        ;
+        padding: 4px;;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 0;
     }
-
     form p input {
         width: 200px;
         height: 35px;
-
+    
     }
-
     header .menu ul li a {
         font-size: 15px;
         padding: 20px;
     }
-
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 50px;
         align-items: center;
     }
-
     .novedades {
         margin: 0;
         display: grid;
         grid-row-gap: 5px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
-
-    .novedades__imagen {
-        display: flex;
-        justify-content: center;
-    }
-    
     .novedades__imagen img {
         width: 50%;
         display: flex;
-        justify-content: center;
     }
-
     .portada {
-        /* La idea es después reemplazarla por un carousel */
         display: flex;
         justify-content: center;
-        width: 100vw;
+        width: 100vw;  
     }
-
     footer {
-        padding: 10px;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .logoFooter {
-        width: 30px;
-        height: 30px;
-        margin: 20px;
-    }
-
-    .redesImagenes {
-        width: 30px;
-        margin: 5px;
-
-    }
-
-    footer div {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-}
-
-@media screen and (max-width: 1024px) {
-    header {
-        grid-template-columns: 1fr;
-        gap: 0px;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 0;
-    }
-
-    .novedades {
-        margin: 0;
-        display: grid;
-        gap: 5px;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    footer {
-        gap: 10px;
         padding: 10px;
         display: flex;
         justify-content: space-around;
     }
     .logoFooter{
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
     }
-    .novedades__imagen{
-
+    .redesImagenes{
+        width:30px;
+        margin: 5px;
+        
     }
+    footer div{
+        display: flex;
+        justify-content: space-around;
+    }
+   
 }

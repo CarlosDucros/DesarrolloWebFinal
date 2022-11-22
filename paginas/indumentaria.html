@@ -6,147 +6,215 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melon Pan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="icon" type="image/x-icon" href="../img/icono.png">
 </head>
 
 <body>
     <div class="fondo"></div>
-    <header id="top">
-        <a href="../index.html">
-            <img src="../img/logo.png" alt="logo" width="100px">
-        </a>
-        <form class="busqueda" action="" method="post">
-            <p>
-                <label for="nombre"></label>
-                <input type="text" name="busqueda" id="busqueda" required="obligatorio" placeholder="Buscar">
-            </p>
-        </form>
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li> <a href="mangas.html">Productos</a>
-                    <ul>
-                        <li><a href="mangas.html">Mangas</a>
-                        </li>
-                        <li>
-                            <a href="indumentaria.html">Indumentaria</a>
-                        </li>
-                        <li>
-                            <a href="figuras.html">Figuras</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    <div class="gridProductos">
+        <header>
+            <a href="../index.html">
+                <img src="../img/logo.png" alt="logo" width="100px">
+            </a>
+            <!-- 
+            <form class="busqueda" action="" method="post">
+                <p>
+                    <label for="nombre"></label>
+                    <input type="text" name="busqueda" id="busqueda" required="obligatorio" placeholder="Buscar">
+                </p>
+            </form>
+            -->
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li> <a href="mangas.html">Productos</a>
+                        <ul>
+                            <li><a href="mangas.html">Mangas</a>
+                            </li>
+                            <li>
+                                <a href="indumentaria.html">Indumentaria</a>
+                            </li>
+                            <li>
+                                <a href="figuras.html">Figuras</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <aside>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Vestimentas
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Hoodies
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Remeras
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Talles
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Small
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Medium
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla blanditiis, doloremque voluptas
-                    molestiae dolorum possimus repellendus. Magni, voluptatibus labore. Consequatur cupiditate officiis
-                    laborum magni repellendus laboriosam minima alias repellat consequuntur?</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Ordenar por
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Más vendidos</a></li>
+                        <li><a class="dropdown-item" href="#">A - Z</a></li>
+                        <li><a class="dropdown-item" href="#">Z - A</a></li>
+                        <li><a class="dropdown-item" href="#">Precio: Mayor a menor</a></li>
+                        <li><a class="dropdown-item" href="#">Precio: Menor a mayor</a></li>
+                    </ul>
+                </div>
             </div>
         </aside>
-        <h1>Indumentaria</h1>
-        <section class="productos">
-            <div class="productos__contenedor">
-                <div>
-                    <h3>Nombre</h3>
+        <main>
+            <h1>Indumentaria</h1>
+            <section class="productos">
+                <div class="productos__contenedor">
+                    <div>
+                        <h3>Chainsaw Man</h3>
+                    </div>
+                    <div class="productos__imagen">
+                        <img src="../img/chainsawman.jpg" alt="producto">
+                    </div>
+                    <div class="productos__precio">
+                        <p>$9.99</p>
+                    </div>
                 </div>
-                <div class="productos__imagen">
-                    <img src="../img/imagenejemplo.png" alt="producto">
+                <div class="productos__contenedor">
+                    <div>
+                        <h3>Promised Neverland</h3>
+                    </div>
+                    <div class="productos__imagen">
+                        <img src="../img/promised.jpg" alt="producto">
+                    </div>
+                    <div class="productos__precio">
+                        <p>$9.99</p>
+                    </div>
                 </div>
-                <div class="productos__precio">
-                    <p>$9.99</p>
+                <div class="productos__contenedor">
+                    <div>
+                        <h3>Jujutsu Kaisen</h3>
+                    </div>
+                    <div class="productos__imagen">
+                        <img src="../img/Jujutsu.jpg" alt="producto">
+                    </div>
+                    <div class="productos__precio">
+                        <p>$9.99</p>
+                    </div>
                 </div>
-            </div>
-            <div class="productos__contenedor">
-                <div>
-                    <h3>Nombre</h3>
+                <div class="productos__contenedor">
+                    <div>
+                        <h3>Demon Slayer</h3>
+                    </div>
+                    <div class="productos__imagen">
+                        <img src="../img/Kimetsu.jpg" alt="producto">
+                    </div>
+                    <div class="productos__precio">
+                        <p>$9.99</p>
+                    </div>
                 </div>
-                <div class="productos__imagen">
-                    <img src="../img/imagenejemplo.png" alt="producto">
+                <div class="productos__contenedor">
+                    <div>
+                        <h3>Naruto</h3>
+                    </div>
+                    <div class="productos__imagen">
+                        <img src="../img/Naruto.jpg" alt="producto">
+                    </div>
+                    <div class="productos__precio">
+                        <p>$9.99</p>
+                    </div>
                 </div>
-                <div class="productos__precio">
-                    <p>$9.99</p>
+                <div class="productos__contenedor">
+                    <div>
+                        <h3>Sailor Moon</h3>
+                    </div>
+                    <div class="productos__imagen">
+                        <img src="../img/Sailor.jpg" alt="producto">
+                    </div>
+                    <div class="productos__precio">
+                        <p>$9.99</p>
+                    </div>
                 </div>
-            </div>
-            <div class="productos__contenedor">
-                <div>
-                    <h3>Nombre</h3>
-                </div>
-                <div class="productos__imagen">
-                    <img src="../img/imagenejemplo.png" alt="producto">
-                </div>
-                <div class="productos__precio">
-                    <p>$9.99</p>
-                </div>
-            </div>
-            <div class="productos__contenedor">
-                <div>
-                    <h3>Nombre</h3>
-                </div>
-                <div class="productos__imagen">
-                    <img src="../img/imagenejemplo.png" alt="producto">
-                </div>
-                <div class="productos__precio">
-                    <p>$9.99</p>
-                </div>
-            </div>
-            <div class="productos__contenedor">
-                <div>
-                    <h3>Nombre</h3>
-                </div>
-                <div class="productos__imagen">
-                    <img src="../img/imagenejemplo.png" alt="producto">
-                </div>
-                <div class="productos__precio">
-                    <p>$9.99</p>
-                </div>
-            </div>
-            <div class="productos__contenedor">
-                <div>
-                    <h3>Nombre</h3>
-                </div>
-                <div class="productos__imagen">
-                    <img src="../img/imagenejemplo.png" alt="producto">
-                </div>
-                <div class="productos__precio">
-                    <p>$9.99</p>
-                </div>
-            </div>
-            </div>
-        </section>
+    
+    </section>
     </main>
     <footer>
-        <div class="footer">
-            <img src="./img/imagenejemplo.png" width="150" alt="">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident unde dolores velit adipisci
-                reprehenderit ipsa eaque voluptatem cumque tenetur veritatis aut ea, molestias libero quisquam saepe
-                officia praesentium at nulla!
-            </p>
-            <a href="#top">
-                <h5>Ir al comienzo</h>
-            </a>
-            <p> <strong>Redes</strong> </p>
-            <a href="">
-                <img src="../img/imagenejemplo.png" width="50" height="50" alt="Instagram">
-            </a>
-            <a href="">
-                <img src="../img/imagenejemplo.png" width="50" height="50" alt="Twitter">
-            </a>
-            <a href="">
-                <img src="../img/imagenejemplo.png" width="50" height="50" alt="Facebook">
-            </a>
-        </div>
+        <img class="logoFooter" src="../img/logo.png" alt="logo">
+        <p>
+            Copyright Melon Pan | 2022. Todos los derechos reservados.
+            Defensa de las y los consumidores.
+        </p>
+        <div>
+        <h5>Seguinos en nuestras redes!</h5>
+        <a href="">
+            <img class="redesImagenes" src="../img/insta.png" alt="Instagram">
+        </a>
+        <a href="">
+            <img class="redesImagenes" src="../img/twitter.png" alt="Twitter">
+        </a>
+    </div>
     </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>
