@@ -1,479 +1,319 @@
+@charset "UTF-8";
+header {
+  grid-area: header;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fce5bb;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  z-index: 1000;
+  margin: 1.5% 15%;
+  border-radius: 1rem;
+  padding: 1.1rem; }
+  header .logo {
+    width: 80px; }
+  header .menu {
+    display: flex;
+    justify-content: flex-end; }
+    header .menu ul {
+      list-style: none;
+      margin-bottom: 0; }
+      header .menu ul li {
+        position: relative;
+        float: left; }
+        header .menu ul li:hover > ul {
+          display: initial; }
+        header .menu ul li ul {
+          position: absolute;
+          left: -25%;
+          width: 200px;
+          background: #fce5bb;
+          display: none;
+          border-radius: 1rem;
+          overflow: hidden;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          padding-left: 0; }
+          header .menu ul li ul li {
+            width: 100%; }
+            header .menu ul li ul li:not(:first-child) {
+              border-top: 1px solid rgba(0, 0, 0, 0.1); }
+        header .menu ul li a {
+          font-size: 20px;
+          padding: 20px;
+          color: #0f0f0f;
+          display: block;
+          text-decoration: none; }
+          header .menu ul li a:hover {
+            background-color: #f6bb6e;
+            opacity: 70%;
+            color: #c95a00;
+            border-radius: 6px; }
+
+footer {
+  grid-area: footer;
+  background-color: #262626;
+  width: 100%;
+  color: antiquewhite;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly; }
+  footer .logoFooter {
+    width: 80px;
+    margin: 10px 5px; }
+  footer p {
+    align-self: center; }
+  footer .redesImagenes {
+    width: 50px;
+    margin: 5px; }
+  footer .nostyle {
+    text-decoration: none; }
+
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100%;
-}
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100%; }
 
 .fondo {
-    background-image: url(../img/fondo.png);
-    background-repeat: repeat-x, repeat-y;
-    height: 100%;
-    width: 100vw;
-    position: fixed;
-    z-index: -1;
-    opacity: 0.7;
-}
+  background-image: url(../img/fondo.png);
+  background-repeat: repeat-x, repeat-y;
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.7; }
 
 .grid {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        "main main"
-        "footer footer";
-}
-
-.gridProductos {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        "aside main"
-        "footer footer";
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto 1fr;
-}
+  display: grid;
+  grid-template-areas: "header header" "main main" "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto 1fr; }
 
 h1 {
-    text-align: center;
-    padding: 15px;
+  text-align: center;
+  padding: 15px; }
 
-}
-
-header {
-    grid-area: header;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #fce5bb;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-    padding: 0%;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    z-index: 1000;
-    margin: 1.5% 15%;
-    border-radius: 1rem;
-    padding: 1.1rem;
-}
-
-.menu {
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-.logo {
-    width: 80px;
-}
-
-header .menu ul {
-    list-style: none;
-    margin-bottom: 0;
-
-}
-
-header .menu ul li {
-    position: relative;
-    float: left;
-}
-
-header .menu ul li a {
-    font-size: 20px;
-    padding: 20px;
-    color: rgb(15, 15, 15);
-    display: block;
-    text-decoration: none;
-}
-
-header .menu ul li a:hover {
-    background-color: #f6bb6e;
-    opacity: 70%;
-    color: #c95a00;
-    border-radius: 6px;
-}
-
-header .menu ul li ul {
-    position: absolute;
-    left: -25%;
-    width: 200px;
-    background: #fce5bb;
-    display: none;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-    text-align: center;
-    padding-left: 0;
-
-}
-
-header .menu ul li ul li {
-    width: 100%;
-
-
-}
-
-header .menu ul li ul li:not(:first-child) {
-    /* -De donde aprendiste lo de first-child? -Yo: https://i.kym-cdn.com/entries/icons/facebook/000/020/305/internet.jpg */
-    border-top: 1px solid rgba(0, 0, 0, .1);
-}
-
-header .menu ul li:hover>ul {
-    display: initial;
-}
+.gridProductos {
+  display: grid;
+  grid-template-areas: "header header" "aside main" "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto 1fr; }
 
 main {
-    grid-area: main;
-}
-
-.portadaImg {
-    padding: 20px 00px;
-    width: 55%;
-}
-
-.portada {
+  grid-area: main; }
+  main .portada {
     display: flex;
-    justify-content: center;
-}
-
-.novedades {
-    margin: 20px auto;
-    width: 100%;
-    display: grid;
-    align-content: center;
-    grid-row-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.novedades__imagen img {
-    box-shadow: 5px 5px rgba(35, 35, 35, 0.2);
-    transition: filter 0.3s;
-    border-radius: 5%;
-}
-
-.novedades__imagen img:hover {
-    filter: invert(1);
-    /* La idea es reemplazar esto con una imagen naranja con baja opacidad, por ahora es para representarlo nomas */
-}
-
-.novedades__precio p {
-    margin: 10px auto;
-    text-align: center;
-}
-
-.novedades__contenedor {
-    justify-self: center;
-
-}
-
-.novedades__contenedor h3 {
-    text-align: center;
-    white-space: pre-line;
-}
-
-.titulo {
+    justify-content: center; }
+    main .portada .portadaImg {
+      padding: 20px 00px;
+      width: 55%; }
+  main .titulo {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto 1fr;
-    margin-inline: 10%;
-}
+    margin-inline: 10%; }
 
-.invertido {
-    transform: scaleX(-1);
-}
+.novedades {
+  margin: 20px auto;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(3, 1fr); }
+  .novedades__contenedor {
+    justify-self: center; }
+    .novedades__contenedor h3 {
+      text-align: center;
+      white-space: pre-line; }
+    .novedades__contenedor .novedades__imagen img {
+      box-shadow: 5px 5px rgba(35, 35, 35, 0.2);
+      transition: filter 0.3s;
+      border-radius: 5%; }
+      .novedades__contenedor .novedades__imagen img:hover {
+        filter: invert(1); }
+    .novedades__contenedor .novedades__precio p {
+      margin: 10px auto;
+      text-align: center; }
 
 .linea {
-    height: 10px;
-    background: #c95a00;
-    clip-path: polygon(100.00% 48.00%, 100.00% 52.00%, 0.00% 50.00%, 0% 35%);
-    opacity: 0.5;
-}
+  height: 10px;
+  background: #c95a00;
+  clip-path: polygon(100% 48%, 100% 52%, 0% 50%, 0% 35%);
+  opacity: 0.5; }
 
-/* Tuve que crear la clase productos aunque sea muy parecida a novedades por el aside del costado, no se si puedo reutilizar la clase novedades y esto es desprolijo */
+.invertido {
+  transform: scaleX(-1); }
+
+aside {
+  text-align: center;
+  margin-top: 80px;
+  grid-area: aside;
+  background-color: #fce5bb;
+  height: min-content;
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 30px; }
+  aside div {
+    display: block; }
+    aside div .dropdown {
+      margin: 20px; }
+
 .productos {
-    margin: 10px auto;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-}
-
-.productos__imagen img {
-    width: 70%;
-    box-shadow: 5px 5px rgba(35, 35, 35, 0.2);
-    transition: filter 0.3s;
-    border-radius: 5%;
-}
-
-.productos__imagen img:hover {
-    filter: invert(1);
-    /* La idea es reemplazar esto con una imagen naranja con baja opacidad, por ahora es para representarlo nomas*/
-}
-
-.productos__precio p {
-    margin: 10px auto;
-    text-align: center;
-}
-
-.productos__contenedor {
+  margin: 10px auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  .productos .productos__contenedor {
     display: inline-block;
     text-align: center;
     justify-items: center;
-    padding: 25px;
-
-
-}
-
-aside {
-    text-align: center;
-    margin-top: 80px;
-    grid-area: aside;
-    background-color: #fce5bb;
-    height: min-content;
-    padding: 2rem;
-    border-radius: 5px;
-    margin: 30px;
-}
-
-aside div {
-    display: block;
-
-}
-
-.dropdown {
-    margin: 20px;
-}
+    padding: 25px; }
+    .productos .productos__contenedor .productos__imagen img {
+      width: 70%;
+      box-shadow: 5px 5px rgba(35, 35, 35, 0.2);
+      transition: filter 0.3s;
+      border-radius: 5%; }
+      .productos .productos__contenedor .productos__imagen img:hover {
+        filter: invert(1); }
 
 .formulario {
+  text-align: center; }
+  .formulario form {
     text-align: center;
-}
-
-form {
-    text-align: center;
-    padding: 5px;
-}
-
-form p {
-    padding: 10px;
-}
-
-form p label {
-    display: block;
-    float: center;
-}
-
-form p input {
-
-    justify-content: space-between;
-    border-radius: 5px;
-    background-color: #f6bb6e60;
-    width: 400px;
-    height: 45px;
-    border-style: solid;
-    border-color: #c95a00;
-    border-width: 1px;
-    margin-top: 15px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    padding-top: 3px;
-
-}
-
-/* Lo voy a poner cuando tenga el menu hamburguesa
-.busqueda {
-    padding: 0;
-}
-
-.busqueda input {
-    margin: 0;
-}
-*/
-form p input placeholder {
-    color: black;
-}
-
-form p textarea {
-
-    justify-content: space-between;
-    border-radius: 5px;
-    background-color: #f6bb6e60;
-    width: 400px;
-    height: 130px;
-    border-style: solid;
-    border-color: #c95a00;
-    border-width: 1px;
-    margin-top: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    padding-top: 15px;
-}
-
-form button {
-    background-color: #f6bb6e;
-    border-color: #c95a00;
-    width: 60px;
-    height: 30px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.redesImagenes {
-    width: 50px;
-    margin: 5px;
-
-}
-
-footer {
-    grid-area: footer;
-    background-color: rgb(38, 38, 38);
-    width: 100%;
-    color: antiquewhite;
-    padding: 50px;
-    display: flex;
-    justify-content: space-evenly;
-
-}
-footer p{
-    align-self: center;
-}
-.nostyle{
-    text-decoration: none;
-}
-.logoFooter {
-    width: 80px;
-    margin: 10px 5px;
-}
+    padding: 5px; }
+    .formulario form button {
+      background-color: #fce5bb;
+      border-color: #c95a00;
+      width: 60px;
+      height: 30px;
+      border-radius: 5px;
+      margin-bottom: 20px; }
+    .formulario form p {
+      padding: 10px; }
+      .formulario form p label {
+        display: block;
+        float: center; }
+      .formulario form p input, .formulario form p textarea {
+        justify-content: space-between;
+        border-radius: 5px;
+        background-color: #f6bb6e60;
+        width: 400px;
+        height: 45px;
+        border-style: solid;
+        border-color: #c95a00;
+        border-width: 1px;
+        margin-top: 15px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        padding-top: 3px; }
+        .formulario form p input placeholder, .formulario form p textarea placeholder {
+          color: black; }
+      .formulario form p textarea {
+        height: 130px;
+        margin-top: 10px;
+        padding-top: 15px; }
 
 @media screen and (max-width: 480px) {
-    body {
-        font-size: 0.8rem;
-    }
-
-    h3,
-    h5 {
-        font-size: medium;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-        grid-template-columns: 1fr;
-    }
-
-    header {
-        grid-template-columns: 1fr;
-        justify-items: space-evenly;
-        gap: 0px;
-        margin: 0;
-        padding: 4px;
-        ;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 0;
-    }
-
-    form p input {
-        width: 200px;
-        height: 35px;
-
-    }
-
-    header .menu ul li a {
-        font-size: 15px;
-        padding: 20px;
-    }
-
-    .logo {
-        width: 60px;
-        height: 60px;
-        align-items: center;
-    }
-
-    .novedades {
-        margin: 0;
-        display: grid;
-        grid-row-gap: 5px;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .novedades__imagen {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .novedades__imagen img {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .portada {
-        /* La idea es después reemplazarla por un carousel */
-        display: flex;
-        justify-content: center;
-        width: 100vw;
-    }
-
-    footer {
-        padding: 10px;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .logoFooter {
-        width: 30px;
-        height: 30px;
-        margin: 20px;
-    }
-
-    .redesImagenes {
-        width: 30px;
-        margin: 5px;
-
-    }
-
-    footer div {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-}
+  body {
+    font-size: 0.8rem; }
+  h3,
+  h5 {
+    font-size: medium; }
+  .grid {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr; }
+  header {
+    grid-template-columns: 1fr;
+    justify-items: space-evenly;
+    gap: 0px;
+    margin: 0;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0; }
+  form p input, .formulario form p textarea {
+    width: 200px;
+    height: 35px; }
+  header .menu ul li a {
+    font-size: 15px;
+    padding: 20px; }
+  .logo {
+    width: 60px;
+    height: 60px;
+    align-items: center; }
+  .novedades {
+    margin: 0;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-template-columns: 1fr 1fr; }
+  .novedades__imagen {
+    display: flex;
+    justify-content: center; }
+  .novedades__imagen img {
+    width: 50%;
+    display: flex;
+    justify-content: center; }
+  .portada {
+    /* La idea es después reemplazarla por un carousel */
+    display: flex;
+    justify-content: center;
+    width: 100vw; }
+  .gridProductos {
+    display: grid;
+    grid-template-areas: "header" "aside" "main" "footer";
+    grid-template-columns: 1fr; }
+  .productos {
+    margin: 10px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  form p textarea {
+    width: 60vw; }
+  footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around; }
+  .logoFooter {
+    width: 30px;
+    height: 30px;
+    margin: 20px; }
+  .redesImagenes {
+    width: 30px;
+    margin: 5px; }
+  footer div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; } }
 
 @media screen and (max-width: 1024px) {
-    header {
-        grid-template-columns: 1fr;
-        gap: 0px;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 0;
-    }
-
-    .novedades {
-        margin: 0;
-        display: grid;
-        gap: 5px;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    footer {
-        gap: 10px;
-        padding: 10px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .logoFooter{
-        width: 80px;
-        height: 80px;
-    }
-    
-}
+  header {
+    grid-template-columns: 1fr;
+    gap: 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0; }
+  .novedades {
+    margin: 0;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr; }
+  footer {
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around; }
+  .logoFooter {
+    width: 80px;
+    height: 80px; } }

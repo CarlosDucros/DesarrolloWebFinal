@@ -1,0 +1,27 @@
+footer {
+    grid-area: footer;
+    background-color: rgb(38, 38, 38);
+    width: 100%;
+    color: antiquewhite;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .logoFooter {
+        width: 80px;
+        margin: 10px 5px;
+    }
+
+    p {
+        align-self: center;
+    }
+
+    .redesImagenes {
+        width: 50px;
+        margin: 5px;
+    }
+
+    .nostyle {
+        text-decoration: none;
+    }
+}
